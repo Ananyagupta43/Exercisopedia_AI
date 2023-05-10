@@ -63,7 +63,7 @@ const New_navbar = () => {
             <a className="nav-link" href="/userProfile">Profile</a>
           </li> : null}
           {isToken ? <li className="nav-item active">
-            <a className="nav-link" href="/newhome">Yoga AI</a>
+            <a className="nav-link" href="/newhome">Yoga Instructor</a>
           </li> : null}
           {isToken ? <li className="nav-item active">
             <a className="nav-link" href="/logout">Logout </a>
