@@ -66,6 +66,8 @@ const UserProfile = () => {
       // console.log(res);
     } else {
       window.alert("Updated Successfully");
+    localStorage.removeItem("email");
+    localStorage.setItem("email",JSON.stringify(tempCustomer.email));
       setChangedInfo(false)
       navigate("/userProfile");
     }
