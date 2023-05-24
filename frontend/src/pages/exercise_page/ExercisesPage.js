@@ -13,9 +13,9 @@ const ExercisesPage = () => {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   callStartPage();    //we can not use  asyn function inside use effect
-  // }, []) //runs only a single time on page reload
+  useEffect(() => {
+    callStartPage();    //we can not use  asyn function inside use effect
+  }, []) //runs only a single time on page reload
 
   const callStartPage = async () => {
     try {
