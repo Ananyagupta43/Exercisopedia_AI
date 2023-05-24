@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./ExercisesPage.css";
 import Navbar from "../../components/New_navbar";
-import ModelFront from "./../../assets/images/FRONT.png";
-import ModelBack from "./../../assets/images/BACK.png";
 import SearchExercises from "../../components/SearchExercises";
 import ExerciseCard from "../../components/ExerciseCard";
 import { Pagination } from "@mui/material";
 import { Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Loader from "./../../components/Loader";
 
 
 const ExercisesPage = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    callStartPage();    //we can not use  asyn function inside use effect
-  }, []) //runs only a single time on page reload
+  // useEffect(() => {
+  //   callStartPage();    //we can not use  asyn function inside use effect
+  // }, []) //runs only a single time on page reload
 
   const callStartPage = async () => {
     try {
@@ -40,9 +39,7 @@ const ExercisesPage = () => {
       navigate("/login");
     }
   }
-  const exerciseDetails = ()=>{
 
-  }
 
   const [exercises, setExercises] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -62,7 +59,7 @@ const ExercisesPage = () => {
     <Navbar />
     <SearchExercises setExercises={setExercises} setIsLoading={setIsLoading} setCurrentPage={setCurrentPage} />
     <div>
-      {isLoading ? <Spinner animation="border" variant="info" style={{ position: "absolute", left: "50%" }} /> :
+      {isLoading ? <Loader /> :
         exercises.length > 0 && (
           <h4 style={{ color: "white", paddingLeft: "30px" }}>Showing Exercises...</h4>
 
@@ -73,7 +70,7 @@ const ExercisesPage = () => {
         {
           currentExercises.map((exercise, index) => (
             <div style={{ margin: "25px 10px", borderRadius: "15px", cursor: "pointer", width: "380px", height: "auto", backgroundColor: "white", boxShadow: " 0px 5px 10px 0px rgba(0, 0, 0, 0.5)" }}>
-              <ExerciseCard key={index} exercise={exercise} onclick= { (exercise)=> exerciseDetails(exercise)}/>
+              <ExerciseCard key={index} exercise={exercise} />
             </div>
           ))
         }
