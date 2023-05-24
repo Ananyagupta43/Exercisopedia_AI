@@ -149,17 +149,6 @@ const Form = () => {
                     <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
                 </select>
 
-                {/*            <label className="inputs-label">Goal weight</label>
-            <select for="goal" name="goal" className="inputs" style={{ fontWeight: "600" }} onChange={handleInfo} required>
-                <option value="m" selected>Maintain weight</option>
-                <option value="l">Mild weight loss of 0.5 lb (0.25 kg) per week</option>
-                <option value="l1">Weight loss of 1 lb (0.5 kg) per week</option>
-                <option value="l2">Extreme weight loss of 2 lb (1 kg) per week</option>
-                <option value="g">Mild weight gain of 0.5 lb (0.25 kg) per week</option>
-                <option value="g1">Weight gain of 1 lb (0.5 kg) per week</option>
-                <option value="g2">Weight gain of 1 lb (0.5 kg) per week</option>
-</select> */}
-
                 <div style={{ display: "flex", justifyContent: 'flex-start', alignItems: "center", flexWrap: "wrap" }}>
                     <button className="button" type="button" onClick={() => handleSave()}>Save</button>
                     <button className="button" onClick={() => goToCalculatorPage("BMICalculator")}>BMI Calculator</button>
