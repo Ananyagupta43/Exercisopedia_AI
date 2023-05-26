@@ -184,7 +184,7 @@ router.put('/update', async (req, res) => {
 
 router.post('/calculatingBmi', authenticate, async (req, res) => {
     try {
-
+        
         let transporter = await nodemailer.createTransport({
             service: "gmail",
             auth: {

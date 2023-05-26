@@ -4,7 +4,6 @@ import ExerciseCard from "./ExerciseCard";
 import { Pagination } from "@mui/material";
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises, setIsReady }) => {
-    console.log(equipmentExercises);
     const [currentPage, setCurrentPage] = useState(1);
     const exercisesPerPage = 6;
     const indexOfLastExercise = currentPage * exercisesPerPage;

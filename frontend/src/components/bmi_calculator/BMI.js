@@ -40,7 +40,6 @@ const BMI = ({ person }) => {
             }
         }
         catch (err) {
-            console.log(err);
             navigate("/login");
         }
 

@@ -198,7 +198,6 @@ function YogaCanvas() {
 
         classification.array().then((data) => {
           const classNo = CLASS_NO[currentPose];
-          console.log(data[0][classNo]);
           if (data[0][classNo] > 0.97) {
             if (!flag) {
               countAudio.play();

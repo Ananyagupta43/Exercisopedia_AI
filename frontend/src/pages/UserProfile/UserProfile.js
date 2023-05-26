@@ -47,7 +47,6 @@ const UserProfile = () => {
 
   const updateInfo = async (e) => {
     e.preventDefault();
-    console.log(tempCustomer);
     const { first_name, last_name, email, phone, password, _id } = tempCustomer;
     const res = await fetch("/update", {
       method: "PUT",
@@ -63,7 +62,6 @@ const UserProfile = () => {
     const data = await res.json();
     if (res.status === 400 || !data) {
       window.alert("Please fill all the fields");
-      // console.log(res);
     } else {
       window.alert("Updated Successfully");
     localStorage.removeItem("email");
