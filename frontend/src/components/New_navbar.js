@@ -5,13 +5,13 @@ import NewLogo from '../assets/images/exercise_pedia.png'
 
 const New_navbar = () => {
 
-  const [isToken, setToken] = useState(true);
+  const [isToken, setToken] = useState(false);
   useEffect(() => {
     allLocalValues();
   }, [])
 
   const allLocalValues = () => {
-
+if(localStorage.getItem('jwtoken')!=null){
     const token = JSON.parse(localStorage.getItem('jwtoken'));
     if (token) {
       setToken(true);
@@ -19,6 +19,7 @@ const New_navbar = () => {
     if (!token) {
       setToken(false);
     }
+  }
   }
 
   return (
