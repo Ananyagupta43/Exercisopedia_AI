@@ -1,7 +1,7 @@
 .about-container {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(100deg, #FF8C00, #FFA500);
+    background: linear-gradient(100deg, #3c3c3c, rgb(203, 203, 75));
     font-family: 'Fira Sans' , sans-serif;
 }
 .about-heading {

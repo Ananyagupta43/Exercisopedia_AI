@@ -16,7 +16,7 @@ export default function About() {
             <div className="about-main">
                 <p className="about-content">
                     Yoga has been the way of life for centuries. By building exercisopedia we have built a Yoga trainer website where learners can select the pose that they intend to do and then our unique pose detection and pose correction software shall help them navigate their learning experience.
-                    This is an open source project by a bunch of third year students.
+                   
                 </p>
                 <p className="about-content">
                     This AI first predicts keypoints or coordinates of different parts of the body(basically where

@@ -6,7 +6,7 @@ import Target from "./../assets/icons/target_black.png";
 const Details = ({ exerciseDetail }) => {
     const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
 
-    return <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", padding: "30px 50px", width: "100vw" }}>
+    return <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", padding: "30px 50px", paddingTop:"10px", width: "100vw" }}>
         <div style={{ padding: '70px 50px', borderRadius: "75px", background: "white" }}>
             <img src={gifUrl} alt={name} Loading="lazy"></img>
         </div>

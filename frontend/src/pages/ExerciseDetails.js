@@ -4,6 +4,8 @@ import { exerciseOptions, fetchData, youtubeOptions } from "./../utils/fetchData
 import Details from "./../components/Details";
 import SimilarExercises from "./../components/SimilarExercises";
 import ExerciseVideos from "./../components/ExerciseVideos";
+import Navbar from "../components/New_navbar";
+
 
 const ExerciseDetails = () => {
 
@@ -38,6 +40,7 @@ const ExerciseDetails = () => {
     }, [id]);
 
     return <div style={{ backgroundColor: "black"}}>
+        <Navbar/>
         <Details exerciseDetail={exerciseDetail} />
         <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
         <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
